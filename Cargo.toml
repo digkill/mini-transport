@@ -1,0 +1,12 @@
+[package]
+name = "mini-transport"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bytes = "1"
+anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+quinn = { version = "0.11.7", features = ["rustls"] }
+rcgen = "0.13.2"
+rustls = "0.23"
