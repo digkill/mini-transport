@@ -5,7 +5,6 @@ use quinn::{Endpoint, ServerConfig};
 use tokio::net::ToSocketAddrs;
 use rcgen::generate_simple_self_signed;
 use rustls::pki_types::{CertificateDer, PrivateKeyDer};
-use bytes::BytesMut; // Убрали Bytes, оставили только BytesMut, если он используется
 
 pub async fn start_quic_server<A: ToSocketAddrs>(addr: SocketAddr) -> Result<()> {
     // ── 1. Генерируем самоподписанный сертификат ───────────────
